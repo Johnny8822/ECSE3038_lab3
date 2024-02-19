@@ -16,7 +16,7 @@ async def get_tank_id(id:str):
     for i in tanks:
         if i["id"]==id:
             return i
-        raise HTTPException(status_code=404, detail="Tank not found")
+        raise HTTPException(status_code=404, detail="Invalid ID ")
 
 
 
@@ -38,15 +38,17 @@ async def post_tank(request: Request, response: Response):
 
 
 @app.patch("/tank/{id}", status_code=status.HTTP_200_OK)
-async def alter_tanks(id:str, request: Request):
-    alter_tank = await request.json()
+async def change_tanks(id:str, request: Request):
+    change_tank = await request.json()
 
     for i, tank in enumerate(tanks):
         if tank["id"] == id:
-            alter_tank.pop("id",None)
-            tanks[i] = {**tank, **alter_tank}
+            change_tank.pop("id",None)
+            tanks[i] = {**tank, **change_tank}
             return tanks[i]
-        raise HTTPException(status_code=404, detail="Tank not found")
+        raise HTTPException(status_code=404, detail="Object not found")
+
+
 
 @app.delete("/tank/{id}", status_code=status.HTTP_200_OK)
 def delete_tank(id:str):
@@ -54,4 +56,4 @@ def delete_tank(id:str):
         if tanks[i]["id"] == id:
            del tanks[i]
            return()
-    raise HTTPException(status_code=404, detail="Tank not found")
+    raise HTTPException(status_code=404, detail="Object not found")
