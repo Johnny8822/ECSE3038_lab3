@@ -12,7 +12,7 @@ def get_tank():
 
 
 @app.get("/tank/{id}")
-async def get_tank_id(id:str):
+async def get_tankid(id:str):
     for i in tanks:
         if i["id"]==id:
             return i
@@ -51,7 +51,7 @@ async def change_tanks(id:str, request: Request):
 
 
 @app.delete("/tank/{id}", status_code=status.HTTP_200_OK)
-def delete_tank(id:str):
+def remove_tank(id:str):
     for i in range(len(tanks)):
         if tanks[i]["id"] == id:
            del tanks[i]
