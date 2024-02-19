@@ -11,12 +11,12 @@ def get_tank():
     return tanks 
 
 
+@app.get("/tank/{id}")
 async def get_tank_id(id:str):
     for i in tanks:
         if i["id"]==id:
             return i
         raise HTTPException(status_code=404, detail="Tank not found")
-
 
 
 
