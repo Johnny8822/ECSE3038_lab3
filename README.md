@@ -31,5 +31,12 @@ If the API is unable to located the a object that has the id specified, the API 
 Your web application should allow the client to delete any previously POSTed object. 
 The web application should not send back any message to the client once the objects has been deleted. 
 There should, however, be a suitable status code that indicates **success** and that an **empty response is expected**.
-If the API is unable to located the a object that has the id specified, the API should respond with an appropriate response message and status code.
+If the API is unable to located the a object that has the id specified, the API should respond with an appropriate response message and status code. 
+
+
+Reason for code: If I dont I fail, no one likes to fail, if you do then something is wrong with you 
+
+Two lies and a truth 
+
+I travelled to the future and back to the past. My favorite colour is purple, I named my dog after my mom.
 
