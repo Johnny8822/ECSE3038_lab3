@@ -36,7 +36,6 @@ If the API is unable to located the a object that has the id specified, the API 
 
 Reason for code: If I dont I fail, no one likes to fail, if you do then something is wrong with you 
 
-Two lies and a truth 
+Two truth and a lie 
 
-I travelled to the future and back to the past. My favorite colour is purple, I named my dog after my mom.
-
+I travelled to the future and back to the past. I named my dog after my Grandmother, My favorite colour is Blue
